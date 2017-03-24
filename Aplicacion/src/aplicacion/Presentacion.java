@@ -39,6 +39,15 @@ public class Presentacion extends javax.swing.JFrame {
         divi = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         res = new javax.swing.JLabel();
+        sin = new javax.swing.JButton();
+        cos = new javax.swing.JButton();
+        tan = new javax.swing.JButton();
+        sec = new javax.swing.JButton();
+        csc = new javax.swing.JButton();
+        cot = new javax.swing.JButton();
+        asin = new javax.swing.JButton();
+        acos = new javax.swing.JButton();
+        atan = new javax.swing.JButton();
 
         jTextField1.setText("jTextField1");
 
@@ -98,33 +107,140 @@ public class Presentacion extends javax.swing.JFrame {
 
         jLabel1.setText("RESULTADO");
 
+        sin.setText("Seno");
+        sin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                sinMouseClicked(evt);
+            }
+        });
+
+        cos.setText("Coseno");
+        cos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cosMouseClicked(evt);
+            }
+        });
+        cos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cosActionPerformed(evt);
+            }
+        });
+
+        tan.setText("Tangente");
+        tan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tanMouseClicked(evt);
+            }
+        });
+
+        sec.setText("Secante");
+        sec.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                secMouseClicked(evt);
+            }
+        });
+
+        csc.setText("Cosecante");
+        csc.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cscMouseClicked(evt);
+            }
+        });
+
+        cot.setText("Cotangente");
+        cot.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cotMouseClicked(evt);
+            }
+        });
+
+        asin.setText("arcoSeno");
+        asin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                asinMouseClicked(evt);
+            }
+        });
+
+        acos.setText("arcoCoseno");
+        acos.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                acosMouseClicked(evt);
+            }
+        });
+        acos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                acosActionPerformed(evt);
+            }
+        });
+
+        atan.setText("arcoTangente");
+        atan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                atanMouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(36, 36, 36)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(numer)
+                            .addComponent(numero)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(suma)
+                            .addComponent(sin))))
+                .addGap(7, 7, 7)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(n1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(n2, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(cos)
+                                .addGap(18, 18, 18)
+                                .addComponent(tan)
+                                .addGap(26, 26, 26)
+                                .addComponent(sec)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 28, Short.MAX_VALUE)
+                                .addComponent(csc)
+                                .addGap(18, 18, 18)
+                                .addComponent(cot)))
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(asin)
+                                .addGap(86, 86, 86)
+                                .addComponent(acos)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(atan))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(67, 67, 67)
+                                .addComponent(resta)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(multi)
+                                .addGap(88, 88, 88)
+                                .addComponent(divi)))
+                        .addGap(54, 54, 54))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(63, 63, 63))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(numer)
-                        .addComponent(numero))
-                    .addComponent(suma))
-                .addGap(31, 31, 31)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(res, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(n1, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(n2, javax.swing.GroupLayout.PREFERRED_SIZE, 239, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(resta)
-                        .addGap(44, 44, 44)
-                        .addComponent(multi)
-                        .addGap(38, 38, 38)
-                        .addComponent(divi)))
-                .addContainerGap(32, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(res, javax.swing.GroupLayout.PREFERRED_SIZE, 191, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(160, 160, 160))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(123, 123, 123))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -137,17 +253,36 @@ public class Presentacion extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(numer)
                     .addComponent(n2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(73, 73, 73)
+                .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(suma)
-                    .addComponent(resta)
-                    .addComponent(multi)
-                    .addComponent(divi))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
-                .addComponent(res, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cot)
+                    .addComponent(csc)
+                    .addComponent(sec)
+                    .addComponent(tan)
+                    .addComponent(sin)
+                    .addComponent(cos))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(asin)
+                    .addComponent(acos)
+                    .addComponent(atan))
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(suma)
+                            .addComponent(resta))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 6, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(divi)
+                            .addComponent(multi))
+                        .addGap(36, 36, 36)
+                        .addComponent(res, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addGap(18, 18, 18))
+                .addGap(25, 25, 25))
         );
 
         pack();
@@ -201,6 +336,70 @@ public class Presentacion extends javax.swing.JFrame {
         res.setText(String.valueOf(miCalGra.resta(x1, y1)));          // TODO add your handling code here:
     }//GEN-LAST:event_restaMouseClicked
 
+    private void sinMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_sinMouseClicked
+        String x = n1.getText();
+        double x1=Double.parseDouble(x);
+        res.setText(String.valueOf(miCalGra.seno(x1))); 
+        
+        // TODO add your handling code here:
+    }//GEN-LAST:event_sinMouseClicked
+
+    private void cosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cosMouseClicked
+       String x = n1.getText();
+        double x1=Double.parseDouble(x);
+        res.setText(String.valueOf(miCalGra.coseno(x1)));  // TODO add your handling code here:
+    }//GEN-LAST:event_cosMouseClicked
+
+    private void tanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tanMouseClicked
+         String x = n1.getText();
+        double x1=Double.parseDouble(x);
+        res.setText(String.valueOf(miCalGra.tangente(x1)));// TODO add your handling code here:
+    }//GEN-LAST:event_tanMouseClicked
+
+    private void secMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_secMouseClicked
+       String x = n1.getText();
+        double x1=Double.parseDouble(x);
+        res.setText(String.valueOf(miCalGra.secante(x1))); // TODO add your handling code here:
+    }//GEN-LAST:event_secMouseClicked
+
+    private void cscMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cscMouseClicked
+        String x = n1.getText();
+        double x1=Double.parseDouble(x);
+        res.setText(String.valueOf(miCalGra.cosecante(x1)));// TODO add your handling code here:
+    }//GEN-LAST:event_cscMouseClicked
+
+    private void cotMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cotMouseClicked
+        String x = n1.getText();
+        double x1=Double.parseDouble(x);
+        res.setText(String.valueOf(miCalGra.cotangente(x1)));// TODO add your handling code here:
+    }//GEN-LAST:event_cotMouseClicked
+
+    private void cosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_cosActionPerformed
+
+    private void asinMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_asinMouseClicked
+      String x = n1.getText();
+        double x1=Double.parseDouble(x);
+        res.setText(String.valueOf(miCalGra.arcoseno(x1)));  // TODO add your handling code here:
+    }//GEN-LAST:event_asinMouseClicked
+
+    private void acosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_acosMouseClicked
+       String x = n1.getText();
+        double x1=Double.parseDouble(x);
+        res.setText(String.valueOf(miCalGra.arcocoseno(x1))); // TODO add your handling code here:
+    }//GEN-LAST:event_acosMouseClicked
+
+    private void acosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_acosActionPerformed
+
+    private void atanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_atanMouseClicked
+       String x = n1.getText();
+        double x1=Double.parseDouble(x);
+        res.setText(String.valueOf(miCalGra.arcotangente(x1))); // TODO add your handling code here:
+    }//GEN-LAST:event_atanMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -237,6 +436,12 @@ public class Presentacion extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton acos;
+    private javax.swing.JButton asin;
+    private javax.swing.JButton atan;
+    private javax.swing.JButton cos;
+    private javax.swing.JButton cot;
+    private javax.swing.JButton csc;
     private javax.swing.JButton divi;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JTextField jTextField1;
@@ -247,6 +452,9 @@ public class Presentacion extends javax.swing.JFrame {
     private javax.swing.JLabel numero;
     private javax.swing.JLabel res;
     private javax.swing.JButton resta;
+    private javax.swing.JButton sec;
+    private javax.swing.JButton sin;
     private javax.swing.JButton suma;
+    private javax.swing.JButton tan;
     // End of variables declaration//GEN-END:variables
 }
