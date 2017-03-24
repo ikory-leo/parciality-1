@@ -5,6 +5,8 @@
  */
 package aplicacion;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Estudiantes
@@ -381,13 +383,21 @@ public class Presentacion extends javax.swing.JFrame {
     private void asinMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_asinMouseClicked
       String x = n1.getText();
         double x1=Double.parseDouble(x);
-        res.setText(String.valueOf(miCalGra.arcoseno(x1)));  // TODO add your handling code here:
+              if(x1>1 ||x1<-1){
+            JOptionPane.showMessageDialog(null, "error, numero 1 no válido debe estar entre 1 y -1");
+        }else{
+        res.setText(String.valueOf(miCalGra.arcoseno(x1)));
+              }// TODO add your handling code here:
     }//GEN-LAST:event_asinMouseClicked
 
     private void acosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_acosMouseClicked
        String x = n1.getText();
         double x1=Double.parseDouble(x);
-        res.setText(String.valueOf(miCalGra.arcocoseno(x1))); // TODO add your handling code here:
+        if(x1>1 ||x1<-1){
+            JOptionPane.showMessageDialog(null, "error, numero 1 no válido debe estar entre 1 y -1");
+        }else{
+        res.setText(String.valueOf(miCalGra.arcocoseno(x1)));
+        }// TODO add your handling code here:
     }//GEN-LAST:event_acosMouseClicked
 
     private void acosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acosActionPerformed
@@ -457,4 +467,8 @@ public class Presentacion extends javax.swing.JFrame {
     private javax.swing.JButton suma;
     private javax.swing.JButton tan;
     // End of variables declaration//GEN-END:variables
+
+    private void JoptionPane(String error_numero_1_no_válido) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }
