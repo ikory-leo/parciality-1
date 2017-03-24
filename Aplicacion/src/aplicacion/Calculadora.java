@@ -9,24 +9,34 @@ package aplicacion;
  *
  * @author Estudiantes
  */
-public class Calculadora {
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-   
-        Calculadora cal= new Calculadora();
-        /*
-        miCo.miCalcu=cal;
-        miCo.Conso();
-        */
-        Presentacion miG= new Presentacion();
-        miG.miCalGra=cal;
-        miG.setVisible(true);
-               
-        // TODO code application logic here
+public class Calculadora{
+        
+    double x;
+    
+    double suma(double numeroOne,double numeroTwo){
+        
+        x = numeroOne +numeroTwo;
+        
+        return x;
     }
-        // TODO code application logic here
+        double resta(double numeroOne,double numeroTwo){
+        
+        x = numeroOne - numeroTwo;
+        
+        return x;
+    }
+            double multiplicacion(double numeroOne,double numeroTwo){
+        
+        x = numeroOne*numeroTwo;
+        
+        return x;
+    }
+                double division(double numeroOne,double numeroTwo){
+        
+        x = numeroOne/numeroTwo;
+        
+        return x;
     }
     
+}
 

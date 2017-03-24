@@ -9,13 +9,20 @@ package aplicacion;
  *
  * @author Estudiantes
  */
-public class Aplicacion {
-
+public class Aplicacion   {
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+   
+        Calculadora cal= new Calculadora();
+        
+        Presentacion miG= new Presentacion();
+        miG.miCalGra=cal;
+        miG.setVisible(true);
+               
+        // TODO code application logic here
+    }
         // TODO code application logic here
     }
     
-}
